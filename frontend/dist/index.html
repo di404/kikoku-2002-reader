@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鬼哭街</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="drag" style="--wails-draggable:drag"></div>
+<div id="screen">
+  <div id="stage"></div>
+  <div id="flash"></div>
+  <video id="movie" playsinline></video>
+  <div id="box" class="hidden">
+    <div id="text"></div>
+    <div id="cursor">▼</div>
+  </div>
+  <div id="hint"></div>
+</div>
+
+<div id="menu" class="hidden">
+  <div class="panel">
+    <header>
+      <h1>鬼哭街</h1>
+      <span id="where"></span>
+      <button id="close" title="返回 (Esc)">返回</button>
+    </header>
+    <div class="cols">
+      <section>
+        <h2>文字</h2>
+        <label>字体
+          <select id="fontFamily"></select>
+        </label>
+        <label>自定义字体名
+          <input id="fontCustom" placeholder="已安装字体的名字，例如 Source Han Serif SC">
+        </label>
+        <div class="row">
+          <button id="fontFile">选择字体文件…</button>
+          <span id="fontFileName" class="dim" title="双击取消"></span>
+        </div>
+        <label>字号
+          <input id="fontScale" type="range" min="0.7" max="1.6" step="0.05">
+        </label>
+        <label>行距
+          <input id="lineHeight" type="range" min="1.3" max="2.4" step="0.05">
+        </label>
+        <label>文字框浓度
+          <input id="boxOpacity" type="range" min="0" max="1" step="0.02">
+        </label>
+        <p id="preview">钢铁的手指爬行在痛苦呻吟着的少女乳房上。<br>「……」</p>
+        <h2>声音</h2>
+        <label>音乐 <input id="music" type="range" min="0" max="1" step="0.05"></label>
+        <label>音效 <input id="effect" type="range" min="0" max="1" step="0.05"></label>
+        <div class="row">
+          <button id="fullscreen">全屏 (F)</button>
+          <button id="gamedir">更换游戏目录…</button>
+          <button id="quit">退出</button>
+        </div>
+      </section>
+      <section>
+        <h2>章节</h2>
+        <ol id="scenes"></ol>
+        <h2>过场</h2>
+        <ul id="movies"></ul>
+      </section>
+    </div>
+    <p class="dim keys">点击 / 空格 / 回车：下一句　←、滚轮上：上一句　右键 / H：隐藏文字　按住 Ctrl：快进　Esc：菜单</p>
+  </div>
+</div>
+
+<div id="error" class="hidden">
+  <p id="errorText"></p>
+  <button id="errorPick">选择游戏目录…</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "kikoku2002",
+  "outputfilename": "kikoku2002",
+  "frontend:install": "",
+  "frontend:build": "",
+  "frontend:dir": "frontend",
+  "info": {
+    "productName": "鬼哭街 原版阅读器",
+    "productVersion": "0.1.0",
+    "comments": "Mac reader for the 2002 Kikokugai (Chinese patch)"
+  }
+}
